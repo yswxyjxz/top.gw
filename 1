@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>正在跳转...</title>
+    <!-- 方式一：meta 刷新（0秒后跳转），兼容禁用JS的环境 -->
+    <meta http-equiv="refresh" content="0;url=https://gw.yswxstudy.cn">
+    <!-- 方式二：JavaScript 立即跳转（使用replace，不产生历史记录） -->
+    <script>
+        window.location.replace('https://gw.yswxstudy.cn');
+    </script>
+    <style>
+        /* 极简样式，保证万一未跳转时界面清晰 */
+        body {
+            background-color: #f2f2f2;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 1rem;
+        }
+        .card {
+            max-width: 400px;
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            text-align: center;
+            border: 1px solid #eaeef2;
+        }
+        .link {
+            word-break: break-all;
+            color: #1a73e8;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .link:hover {
+            text-decoration: underline;
+        }
+        .note {
+            color: #5f6b7a;
+            font-size: 0.9rem;
+            margin-top: 1.2rem;
+            border-top: 1px dashed #d0d9e4;
+            padding-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <!-- 绝大多数情况下用户看不到此内容，页面会瞬间跳转 -->
+        <p style="margin-top:0;">🔀 正在跳转至</p>
+        <p><strong><a href="https://gw.yswxstudy.cn" class="link">gw.yswxstudy.cn</a></strong></p>
+        <p class="note">
+            ⏳ 如果页面没有自动跳转，
+            <a href="https://gw.yswxstudy.cn" class="link">请点击此处</a>。
+        </p>
+        <!-- 针对完全禁用JS且meta刷新被阻止的极端情况 -->
+        <noscript>
+            <div style="margin-top:1rem; padding:0.5rem; background:#fff0e0; border-radius:8px;">
+                您的浏览器未支持自动跳转，请手动点击上方链接。
+            </div>
+        </noscript>
+    </div>
+</body>
+</html>
